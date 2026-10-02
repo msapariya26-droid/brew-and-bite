@@ -6,6 +6,6 @@
     "node": "24.x"
   },
   "scripts": {
-    "build": "cd client && npm ci && npm run build"
+    "build": "[ -d \"client\" ] && (cd client && npm ci && npm run build) || (npm run build)"
   }
 }
