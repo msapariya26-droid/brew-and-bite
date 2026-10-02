@@ -2,7 +2,10 @@
   "name": "brew-and-bite-root",
   "private": true,
   "version": "1.0.0",
+  "engines": {
+    "node": "24.x"
+  },
   "scripts": {
-    "build": "cd client && npm install && npm run build"
+    "build": "cd client && npm ci && npm run build"
   }
 }
