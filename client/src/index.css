@@ -1,0 +1,89 @@
+@import "tailwindcss";
+@import "@fontsource-variable/playfair-display";
+@import "@fontsource-variable/plus-jakarta-sans";
+
+@theme {
+  /* Core palette from DESIGN.md */
+  --color-primary: #000000;
+  --color-on-primary: #ffffff;
+  --color-secondary: #8b500b;
+  --color-on-secondary: #ffffff;
+  --color-tertiary: #000000;
+  --color-on-tertiary: #ffffff;
+  --color-neutral: #fbf9f5;
+  --color-danger: #ba1a1a;
+  
+  /* Additional derived/surface colors */
+  --color-surface: #ffffff;
+  --color-surface-dim: #dbdad6;
+  --color-on-surface: #1b1c1a;
+  --color-on-surface-variant: #4e4541;
+  --color-line: #eae2d8;
+  --color-muted: #8c827a;
+  --color-oat-wash: #f5f0eb;
+  --color-milled-flour: #efe8df;
+
+  /* Typography / Fonts */
+  --font-headline: "Playfair Display Variable", "Playfair Display", serif;
+  --font-body: "Plus Jakarta Sans Variable", "Plus Jakarta Sans", sans-serif;
+
+  /* Typographic Scales mapped into Tailwind utilities */
+  --text-display-hero: 56px;
+  --text-display-hero-mobile: 38px;
+  --text-headline-lg: 40px;
+  --text-headline-md: 28px;
+  --text-headline-sm: 22px;
+  --text-body-lg: 17px;
+  --text-body-md: 15px;
+  --text-body-sm: 13px;
+  --text-label-lg: 14px;
+  --text-label-md: 12px;
+  --text-label-sm: 10px;
+
+  /* Radii */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-full: 9999px;
+
+  /* Spacing */
+  --spacing-gutter: 1.5rem;
+  --spacing-gutter-mobile: 1rem;
+  --spacing-margin: 3rem;
+  --spacing-margin-mobile: 1.25rem;
+  --spacing-space-xs: 0.25rem;
+  --spacing-space-sm: 0.5rem;
+  --spacing-space-md: 1rem;
+  --spacing-space-lg: 1.75rem;
+  --spacing-space-xl: 2.5rem;
+
+  /* Motion */
+  --ease-brew: cubic-bezier(.22, .8, .24, 1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-neutral);
+  color: var(--color-on-surface);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-headline);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+  }
+}
